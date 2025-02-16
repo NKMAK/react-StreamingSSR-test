@@ -1,7 +1,20 @@
-const App = () => {
+export default function App() {
   return (
-    <h1>Appコンポーネント</h1>
-  )
+    <html>
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>My app</title>
+      </head>
+      <body>
+        <Router />
+      </body>
+    </html>
+  );
 }
 
-export default App;
+function Router() {
+  return (
+    <h1>Routerだよ</h1>
+  )
+}
