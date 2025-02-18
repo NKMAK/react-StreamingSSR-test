@@ -1,3 +1,6 @@
+import LazyContent from "./components/LazyContent";
+
+import { Suspense } from "react";
 export default function App() {
   return (
     <html>
@@ -8,6 +11,9 @@ export default function App() {
       </head>
       <body>
         <Router />
+        <Suspense fallback={<div>Loading...</div>}>
+          <LazyContent />
+        </Suspense>
       </body>
     </html>
   );
