@@ -1,6 +1,8 @@
-import LazyContent from "./components/LazyContent";
+import { Suspense, lazy } from "react";
+// import LazyContent from "./components/LazyContent";
 
-import { Suspense } from "react";
+const LazyContent = lazy(() => import('./components/LazyContent'));
+
 export default function App() {
   return (
     <html>
