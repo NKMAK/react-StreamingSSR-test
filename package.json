@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build:vite": "vite build",
+    "build": "npm-run-all --parallel build:vite build:server",
     "lint": "eslint .",
     "preview": "vite preview",
     "build:server": "webpack --config webpack.config.cjs",
@@ -31,6 +32,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.18",
     "globals": "^15.14.0",
+    "npm-run-all": "^4.1.5",
     "vite": "^6.1.0",
     "webpack": "^5.98.0",
     "webpack-cli": "^6.0.1",
