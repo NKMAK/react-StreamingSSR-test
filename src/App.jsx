@@ -2,6 +2,7 @@ import { Suspense, lazy } from "react";
 // import LazyContent from "./components/LazyContent";
 
 const LazyContent = lazy(() => import('./components/LazyContent'));
+const Counter = lazy(()=> import('./components/Counter'));
 
 export default function App() {
   return (
@@ -15,6 +16,9 @@ export default function App() {
         <Router />
         <Suspense fallback={<div>Loading...</div>}>
           <LazyContent />
+        </Suspense>
+        <Suspense fallback={<div>CounterLoading...</div>}>
+          <Counter />
         </Suspense>
       </body>
     </html>
