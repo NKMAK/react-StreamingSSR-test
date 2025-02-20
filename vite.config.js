@@ -5,13 +5,14 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   build: {
-    manifest: true,
     outDir: 'dist',
+    manifest: true,
     rollupOptions: {
       output: {
-        entryFileNames: 'assets/[name].js',
-        chunkFileNames: 'assets/[name].js',
-        assetFileNames: 'assets/[name].[ext]'
+        // entryFileNames: 'assets/[name].js',
+        // chunkFileNames: 'assets/[name].js',
+        entryFileNames: 'assets/main.js',
+        chunkFileNames: 'assets/[name]-[hash].js',
       }
     }
   }
