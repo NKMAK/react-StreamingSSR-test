@@ -9,6 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'module', // module に変更
     chunkFormat: 'module', // 追加
+    publicPath:"/",  // これ追加でどうだ？
   },
   experiments: {
     outputModule: true, // outputModule を有効にする

@@ -1,13 +1,11 @@
 import { use } from "react";
 
 const LazyContent = () => {
-
   use(new Promise((resolve) => {
     setTimeout(() => {
       resolve(true);
-    }, 3000);
+    }, 2000);
   }));
-
 
   return (
     <div>

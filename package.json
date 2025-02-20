@@ -15,7 +15,8 @@
     "@babel/register": "^7.25.9",
     "express": "^4.21.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-spinners": "^0.15.0"
   },
   "devDependencies": {
     "@babel/core": "^7.26.9",

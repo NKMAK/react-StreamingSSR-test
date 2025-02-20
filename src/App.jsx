@@ -1,7 +1,7 @@
-import { Suspense, lazy } from "react";
-// import LazyContent from "./components/LazyContent";
-
-const LazyContent = lazy(() => import('./components/LazyContent'));
+import { Suspense } from "react";
+import LazyContent from "./components/LazyContent";
+// const LazyContent = lazy(() => import('./components/LazyContent.jsx'));
+import LoadingFallback from "./components/LoadingFallback.jsx";
 
 export default function App() {
   return (
@@ -13,7 +13,7 @@ export default function App() {
       </head>
       <body>
         <Router />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<LoadingFallback />}>
           <LazyContent />
         </Suspense>
       </body>
