@@ -8,7 +8,6 @@ import { dirname } from 'path';
 const app = express()
 const port = 8080
 
-
 // 静的ファイルの提供を追加
 // app.use(express.static('dist'))
 
@@ -27,7 +26,7 @@ app.use('/dist', express.static(path.join(rootDir, 'dist'), {
 app.get('/', (_, res) => {
   const { pipe } = renderToPipeableStream(<App />, {
     // bootstrapScripts: ['../dist/assets/main.js'],  // この行不要か？main.js消しても機能するぞ... ⇒ いやmain.jsはnpm run buildがクライアントのビルドでnpm run build:serverがサーバーのビルドなのでクライアントで作られるやつなので要るかも
-    bootstrapScripts: ['/assets/index.js'],  // Viteのビルド出力に合わせたパス
+    // bootstrapScripts: ['/assets/index.js'],  // Viteのビルド出力に合わせたパス
     onShellReady() {
       res.setHeader('content-type', 'text/html')
       pipe(res)

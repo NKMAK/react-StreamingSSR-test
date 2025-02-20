@@ -13,7 +13,7 @@ export default function App() {
       </head>
       <body>
         <Router />
-        <Suspense fallback={<div>Loading中だよ...</div>}>
+        <Suspense fallback={<div>Loading...</div>}>
           <LazyContent />
         </Suspense>
         <Suspense fallback={<div>CounterLoading...</div>}>
